@@ -5,7 +5,7 @@ const findDistance = require('./findDistance.js');
 
 //returns a promise to a query url for each cuisine type to be searched
 const requestRestaurants = function(cuisine, latitude, longitude, radius) {
-  const searchURL = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${cuisine}+food&sensor=true&location=${latitude},${longitude}&key=${process.env.GOOGLE_API_KEY}`;
+  const searchURL = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${cuisine}+food&sensor=true&location=${latitude},${longitude}&key=${process.env.GOOGLE_API_KEY}&opennow&maxprice=${maxPrice}&type=restaurant`;
 
   return axios({
     method: 'get',
