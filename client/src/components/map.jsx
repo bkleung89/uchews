@@ -43,75 +43,75 @@ class MapContainer extends React.Component {
   render() {
     if (this.props.quick) {
       return (
-    <div style={style.map}>
-      <Map google={this.props.google}
-           onClick={this.onMapClicked}
-           zoom={12}
-           initialCenter={{
-             lat: this.props.results[0][0].geometry.location.lat,
-             lng: this.props.results[0][0].geometry.location.lng
-           }}>
-        <Marker
-          label={`#1`}
-          title={`Choice 1`}
-          onClick={this.onMarkerClick}
-          name={this.props.results[0][0].name}
-          address={this.props.results[0][0].formatted_address}
-          position={{lat: this.props.results[0][0].geometry.location.lat, lng: this.props.results[0][0].geometry.location.lng}} />
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-            <p>{this.state.selectedPlace.address}</p>
-          </div>
-        </InfoWindow>
-      </Map>
-    </div>
-    );
+        <div style={style.map}>
+          <Map google={this.props.google}
+               onClick={this.onMapClicked}
+               zoom={12}
+               initialCenter={{
+                 lat: this.props.results[0][0].geometry.location.lat,
+                 lng: this.props.results[0][0].geometry.location.lng
+               }}>
+            <Marker
+              label={`#1`}
+              title={`Choice 1`}
+              onClick={this.onMarkerClick}
+              name={this.props.results[0][0].name}
+              address={this.props.results[0][0].formatted_address}
+              position={{lat: this.props.results[0][0].geometry.location.lat, lng: this.props.results[0][0].geometry.location.lng}} />
+            <InfoWindow
+              marker={this.state.activeMarker}
+              visible={this.state.showingInfoWindow}>
+              <div>
+                <h4>{this.state.selectedPlace.name}</h4>
+                <p>{this.state.selectedPlace.address}</p>
+              </div>
+            </InfoWindow>
+          </Map>
+        </div>
+      );
     } else {
       return (
-    <div style={style.map}>
-      <Map google={this.props.google}
-           onClick={this.onMapClicked}
-           zoom={12}
-           initialCenter={{
-             lat: this.props.results[0][0].geometry.location.lat,
-             lng: this.props.results[0][0].geometry.location.lng
-           }}>
-        <Marker
-          label={`#1`}
-          title={`Choice 1`}
-          onClick={this.onMarkerClick}
-          name={this.props.results[0][0].name}
-          address={this.props.results[0][0].formatted_address}
-          position={{lat: this.props.results[0][0].geometry.location.lat, lng: this.props.results[0][0].geometry.location.lng}} />
-        <Marker
-          label={`#2`}
-          title={`Choice 2`}
-          onClick={this.onMarkerClick}
-          name={this.props.results[1][0].name}
-          address={this.props.results[1][0].formatted_address}
-          position={{lat: this.props.results[1][0].geometry.location.lat, lng: this.props.results[1][0].geometry.location.lng}} />
-        <Marker
-          label={`#3`}
-          title={`Choice 3`}
-          onClick={this.onMarkerClick}
-          name={this.props.results[2][0].name}
-          address={this.props.results[2][0].formatted_address}
-          position={{lat: this.props.results[2][0].geometry.location.lat, lng: this.props.results[2][0].geometry.location.lng}} />
+        <div style={style.map}>
+          <Map google={this.props.google}
+               onClick={this.onMapClicked}
+               zoom={12}
+               initialCenter={{
+                 lat: this.props.results[0][0].geometry.location.lat,
+                 lng: this.props.results[0][0].geometry.location.lng
+               }}>
+            <Marker
+              label={`#1`}
+              title={`Choice 1`}
+              onClick={this.onMarkerClick}
+              name={this.props.results[0][0].name}
+              address={this.props.results[0][0].formatted_address}
+              position={{lat: this.props.results[0][0].geometry.location.lat, lng: this.props.results[0][0].geometry.location.lng}} />
+            <Marker
+              label={`#2`}
+              title={`Choice 2`}
+              onClick={this.onMarkerClick}
+              name={this.props.results[1][0].name}
+              address={this.props.results[1][0].formatted_address}
+              position={{lat: this.props.results[1][0].geometry.location.lat, lng: this.props.results[1][0].geometry.location.lng}} />
+            <Marker
+              label={`#3`}
+              title={`Choice 3`}
+              onClick={this.onMarkerClick}
+              name={this.props.results[2][0].name}
+              address={this.props.results[2][0].formatted_address}
+              position={{lat: this.props.results[2][0].geometry.location.lat, lng: this.props.results[2][0].geometry.location.lng}} />
 
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-            <p>{this.state.selectedPlace.address}</p>
-          </div>
-        </InfoWindow>
-      </Map>
-    </div>
-    );
+            <InfoWindow
+              marker={this.state.activeMarker}
+              visible={this.state.showingInfoWindow}>
+              <div>
+                <h4>{this.state.selectedPlace.name}</h4>
+                <p>{this.state.selectedPlace.address}</p>
+              </div>
+            </InfoWindow>
+          </Map>
+        </div>
+      );
     }
   }
 }

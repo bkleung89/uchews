@@ -29,16 +29,16 @@ const Results = ({ results, quick }) => {
       <Paper style={style.paper} zDepth={3}>
         <div style={{display: 'inline-block'}}>
 
-        <h2>Your Results!</h2>
-        <MapsContainer results={results} quick={quick}/>
-        <div></div>
-        <div style={style.flexContainer}>
-          {quick ? <YelpBox choice={results[0]} num={1}/> :
-            results.map((choice, index) => {
-            return <YelpBox choice={choice} num={index + 1} key={index}/>
-          })}
-       </div>
-       </div>
+          <h2>Your Results!</h2>
+          <MapsContainer results={results} quick={quick}/>
+          <div></div>
+          <div style={style.flexContainer}>
+            {quick ? <YelpBox choice={results[0]} num={1}/> :
+             results.map((choice, index) => {
+               return <YelpBox choice={choice} num={index + 1} key={index}/>
+             })}
+          </div>
+        </div>
       </Paper>
     </div>
   );

@@ -25,20 +25,20 @@ class ChewserForm extends React.Component {
     super(props);
     this.state = {
       types: [
-              'American', 'Asian',
-              'Chinese',
-              'Dessert',
-              'Greek',
-              'Hamburgers', 'Healthy',
-              'Indian', 'Italian',
-              'Japanese',
-              'Mediterranean', 'Mexican', 'Middle Eastern',
-              'Pasta', 'Pizza',
-              'Salads', 'Sandwiches', 'Seafood', 'Soup', 'Sushi',
-              'Thai',
-              'Vegetarian',
-              'Wings', 'Wraps'
-             ],
+        'American', 'Asian',
+        'Chinese',
+        'Dessert',
+        'Greek',
+        'Hamburgers', 'Healthy',
+        'Indian', 'Italian',
+        'Japanese',
+        'Mediterranean', 'Mexican', 'Middle Eastern',
+        'Pasta', 'Pizza',
+        'Salads', 'Sandwiches', 'Seafood', 'Soup', 'Sushi',
+        'Thai',
+        'Vegetarian',
+        'Wings', 'Wraps'
+      ],
     };
   }
 

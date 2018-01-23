@@ -22,7 +22,7 @@ const rightIconMenu = (
     iconButtonElement={iconButtonElement}
     anchorOrigin={{horizontal: 'left', vertical: 'top'}}
     targetOrigin={{horizontal: 'left', vertical: 'top'}}
-    >
+  >
   </IconMenu>
 );
 
@@ -49,96 +49,96 @@ class PresentCuisine extends React.Component {
     if (this.state.clickCounter === -1) {
       return (
         <span>
-        <ListItem
-          leftAvatar={<Face />}
-          rightIcon={rightIconMenu}
-          onClick={(event) => {
-            this.setState(prevState => {
-              return {clickCounter: prevState.clickCounter + 1};
-            });
-            this.props.wantToEat.push(this.props.type)
-          }}
-          primaryText={this.props.type}
-          name={this.props.name}
-          value={this.props.type}
-          style={{
-            textAlign: 'left',
-            width: 'auto',
-          }}
-        />
+          <ListItem
+            leftAvatar={<Face />}
+            rightIcon={rightIconMenu}
+            onClick={(event) => {
+                this.setState(prevState => {
+                  return {clickCounter: prevState.clickCounter + 1};
+                });
+                this.props.wantToEat.push(this.props.type)
+            }}
+            primaryText={this.props.type}
+            name={this.props.name}
+            value={this.props.type}
+            style={{
+              textAlign: 'left',
+              width: 'auto',
+            }}
+          />
         </span>
       )
     } else if (this.state.clickCounter === 0) {
       return (
         <span>
-        <ListItem
-          leftAvatar={
-            <Mood
-              color={green500}
-            />
-          }
-          rightIconButton={rightIconMenu}
-          onClick={(event) => {
-            this.setState(prevState => {
-              return {clickCounter: prevState.clickCounter + 1};
-            });
-            this.props.wantToEat.pop()
-            this.props.willNotEat.push(this.props.type)
-          }}
-          primaryText={this.props.type}
-          name={this.props.name}
-          value={this.props.type}
-          style={{
-            textAlign: 'left',
-            width: 'auto',
-          }}
-        />
+          <ListItem
+            leftAvatar={
+              <Mood
+                color={green500}
+              />
+            }
+            rightIconButton={rightIconMenu}
+            onClick={(event) => {
+                this.setState(prevState => {
+                  return {clickCounter: prevState.clickCounter + 1};
+                });
+                this.props.wantToEat.pop()
+                this.props.willNotEat.push(this.props.type)
+            }}
+            primaryText={this.props.type}
+            name={this.props.name}
+            value={this.props.type}
+            style={{
+              textAlign: 'left',
+              width: 'auto',
+            }}
+          />
         </span>
       )
     } else if (this.state.clickCounter === 1) {
       return (
         <span>
-        <ListItem
-          leftAvatar={
-            <MoodBad
-              color={red500}
-            />
-          }
-          rightIconButton={rightIconMenu}
-          onClick={(event) => {
-            this.setState(prevState => {
-              return {clickCounter: prevState.clickCounter + 1};
-            });
-            this.props.willNotEat.pop()
-          }}
-          primaryText={this.props.type}
-          name={this.props.name}
-          value={this.props.type}
-          style={{
-            textAlign: 'left',
-            width: 'auto',
-          }}
-        />
+          <ListItem
+            leftAvatar={
+              <MoodBad
+                color={red500}
+              />
+            }
+            rightIconButton={rightIconMenu}
+            onClick={(event) => {
+                this.setState(prevState => {
+                  return {clickCounter: prevState.clickCounter + 1};
+                });
+                this.props.willNotEat.pop()
+            }}
+            primaryText={this.props.type}
+            name={this.props.name}
+            value={this.props.type}
+            style={{
+              textAlign: 'left',
+              width: 'auto',
+            }}
+          />
         </span>
       )
     } else {
       return(
         <span>
-        <ListItem
-          leftAvatar={<Face />}
-          rightIconButton={rightIconMenu}
-          onClick={(event) =>
-            this.setState(prevState => {
-              return {clickCounter: -1};
-            })}
-          primaryText={this.props.type}
-          name={this.props.name}
-          value={this.props.type}
-          style={{
-            textAlign: 'left',
-            width: 'auto',
-          }}
-        />
+          <ListItem
+            leftAvatar={<Face />}
+            rightIconButton={rightIconMenu}
+            onClick={(event) =>
+              this.setState(prevState => {
+                return {clickCounter: -1};
+              })}
+            primaryText={this.props.type}
+            name={this.props.name}
+            value={this.props.type}
+            style={{
+              textAlign: 'left',
+              width: 'auto',
+            }}
+          />
         </span>
       )
     }

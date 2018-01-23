@@ -80,25 +80,25 @@ const YelpBox = ({choice, num}) => {
 
   return (
     <div>
-    <h1>#{num}</h1>
-    <div style={style.restaurantBox}>
-      <div>
-        <a><img src={choice[0].yelpImg} style={style.img}></img></a>
+      <h1>#{num}</h1>
+      <div style={style.restaurantBox}>
+        <div>
+          <a><img src={choice[0].yelpImg} style={style.img}></img></a>
+        </div>
+        <div style={style.restaurantDetails}>
+          <h3>{choice[0].name}</h3>
+          <a>{choice[0].formatted_address}</a>
+          <p><img src={getStars(choice[0].rating)} style={style.stars}></img>
+            <a> {choice[0].yelpReviewCount} Reviews</a></p>
+          <a style={style.text}>What people are saying:</a>
+          <a>
+            {choice[0].reviews.jsonBody.reviews.map((review) => {
+               return <p style={style.review}>{review.text}</p>
+            })}
+            <a href={choice[0].yelpUrl} target="_blank"><img src={YelpLogo} alt="" style={style.logo}></img></a>
+          </a>
+        </div>
       </div>
-      <div style={style.restaurantDetails}>
-        <h3>{choice[0].name}</h3>
-        <a>{choice[0].formatted_address}</a>
-        <p><img src={getStars(choice[0].rating)} style={style.stars}></img>
-        <a> {choice[0].yelpReviewCount} Reviews</a></p>
-        <a style={style.text}>What people are saying:</a>
-        <a>
-          {choice[0].reviews.jsonBody.reviews.map((review) => {
-            return <p style={style.review}>{review.text}</p>
-          })}
-        <a href={choice[0].yelpUrl} target="_blank"><img src={YelpLogo} alt="" style={style.logo}></img></a>
-        </a>
-      </div>
-    </div>
     </div>
   );
 }
